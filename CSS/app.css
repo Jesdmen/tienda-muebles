@@ -1,0 +1,400 @@
+html {
+    box-sizing: border-box; /*Es para cuando añadamos un width
+    y despues un pading no modifiquemos el tamaño de ese
+    elemento*/
+    font-size: 62.5%; /*Con esto cada 1 rem equivale a 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2; /*Interlineado de los textos*/
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0;
+}
+h1{
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+
+
+
+/** Globales **/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor {
+    max-width: 120rem;
+   margin: 0 auto;
+}
+
+.btn{
+    background-color: #8cbc00;
+    display: block;
+    /*Se usa para copar todo el ancho de la pagina*/
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    text-align: center;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #769c02;
+    cursor: pointer;
+
+}
+
+/*Utilidades*/
+.text-center {
+    text-align: center;
+}
+
+.max-width-30{
+    max-width: 30rem;
+}
+
+
+/** Header y Navegación **/
+
+.nombre-sitio {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.contenedor-navegacion{
+    border-top: 1px solid #e1e1e1;
+}
+
+.nombre-sitio span {
+    color: rgb(76, 120, 179);
+}
+
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 55rem;
+
+
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*Utilidades*/
+.text-center{
+    text-align: center;
+}
+
+/** Categorías **/
+
+.categorias{
+    padding-top: 5rem;
+}
+
+.categorias h2{
+    text-align: center;
+}
+
+.categorias a {
+    text-align: center;
+    display: block;
+    padding: 2rem;
+}
+
+.categorias a:hover {
+    background-color: rgb(76, 120, 179); /* Hover se utiliza
+    para cuando pase el mouse por ahí cambie de color,
+    o haga otra interacción*/
+    color: white;
+    border-bottom-right-radius: 1rem; /*Sirve para poner esquinas
+    redondeadas */
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* Separacion entre columnas*/
+}
+
+/*Bloque nosotros*/
+.sobre-nosotros{
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg); 
+    /*Sirve para hacer degradados*/
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    /*Para no repetir la imagen usada*/
+    background-size: 100%, 120rem;
+}
+
+.sobre-nosotros-grid{
+    display: flex;
+    justify-content: flex-end;
+    /*Eso nos crea dos columnas grid cada 1 de 1 fracción*/
+
+}
+
+.texto-nosotros{
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: white;
+}
+
+/*Listado de productos*/
+
+.contenido-principal{
+    padding-top: 5rem;
+}
+
+.listado-productos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    /*Separacion de las columnas y filas*/
+    
+}
+
+.productos:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-template-columns: 3fr 1fr;
+}
+
+.productos:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.productos:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.productos:nth-child(2) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.productos:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.productos:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.productos:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.productos:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.productos:nth-child(6){
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.productos{
+    background-color: #037bc0;
+}
+
+.texto-producto{
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p {
+    margin: 0 0 .5rem 0;
+}
+
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+    /*Sirve para ampliar la fuente*/
+}
+
+/*Footer*/
+
+.site-footer{
+    border-top: 1px solid #e1e1e1;
+    /*Creamos un margen, tamaño, estilo y color*/
+    margin-top: 5rem;
+    /*MArgin es del elemento hacia afuera*/
+    padding-bottom: 5rem;
+    /*Mientras que padding el elemento hacia adentro*/
+}
+
+.site-footer h3 {
+    margin: .5rem;
+}
+
+.grid-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-menu a {
+    display: block;
+}
+
+.copyright {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+
+
+/*Nosotros*/
+
+.nosotros h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax( 25rem, 1fr));
+    column-gap: 2rem;
+}
+
+.informacion-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*BLOG*/
+
+.contenedor-blog{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada{
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type{
+    border: none;
+}
+
+.entrada-meta{
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p {
+    font-weight: bold;
+}
+
+.entrada-meta span{
+    color: #037bc0;
+}
+
+.contenido-entrada-blog{
+    width: 60rem;
+    margin: 0 auto;
+}
+
+/*Galeria*/
+
+.galeria{
+    list-style: none;
+    /*Sirve para quitar las viñetas de la lista*/
+    
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; 
+}
+
+.galeria img{
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+/*Formulario*/
+
+.formulario{
+    max-width: 60rem;
+    margin: 0;
+}
+
+.formulario fieldset{
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.formulario legend{
+    background-color: #037bc0;
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    flex-basis: 10rem;
+}
+
+.campo input[type="text"]{
+    flex: 1;
+    border: 1px solid #e1e1e1;
+}
+ 
